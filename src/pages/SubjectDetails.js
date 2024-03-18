@@ -3,7 +3,6 @@ import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 import Tab from "react-bootstrap/Tab";
 import { useParams } from "react-router-dom";
-import Syllabus from "../components/common/Syllabus";
 import SideNav from "../components/header/SideNav";
 import TopNav from "../components/header/TopNav";
 import { SubjectData, SyllabusData } from "../constant/SubData";

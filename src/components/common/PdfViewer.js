@@ -23,7 +23,7 @@ const PdfViewer = (item) => {
     cMapPacked: true,
     standardFontDataUrl: "standard_fonts/",
   };
-
+  console.log(pageWidth);
   // Go to next page
   function goToNextPage() {
     setPageNumber((prevPageNumber) => prevPageNumber + 1);

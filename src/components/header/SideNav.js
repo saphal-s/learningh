@@ -10,7 +10,11 @@ const SideBarItems = ({ items }) => {
   return (
     <ul className="sub_category_list">
       {items.map((item) => (
-        <li key={item.id}>{item.title}</li>
+        <li key={item.id}>
+          <Link to={`/${item.id}`} className="no-underline text-white">
+            {item.title}
+          </Link>
+        </li>
       ))}
     </ul>
   );
