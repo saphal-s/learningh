@@ -248,23 +248,23 @@ body {
 /* subjects */
 .feature .title {
   font-weight: 600;
-  font-size: 23px;
+  font-size: 16px;
 }
 .feature li {
   font-weight: 500;
   list-style: none;
   text-transform: capitalize;
   padding: 2px 0;
-  font-size: 17px;
+  font-size: 14px;
 }
 .ficon {
   color: rgb(255, 200, 0);
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .details_card .title {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .sub_features .nav-pills {
