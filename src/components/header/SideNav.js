@@ -30,7 +30,7 @@ const SideNav = () => {
           className="link "
           style={{ display: "flex", alignItems: "center" }}
         >
-          <AiFillHome size={25} className="hicon" />
+          <AiFillHome className="hicon" />
           &nbsp; Home
         </Link>
       </div>

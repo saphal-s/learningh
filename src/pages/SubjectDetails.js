@@ -38,14 +38,14 @@ const SubjectDetails = () => {
       </div>
       <div className="right">
         <TopNav handleShow={handleShow} show={show} />
-        <div className="home_container p-3 p-lg-4">
+        <div className="home_container p-2 p-lg-4">
           <div className="course_group pt-1 pt-lg-2">
             <div className="details_card">
               {filteredData &&
                 filteredData.map((s) => (
                   <div className="sub_detailss" key={s.id}>
-                    <div className="title pb-1">{s.title}</div>
-                    <hr />
+                    <div className="title pb-2 pb-lg-3 mb-3">{s.title}</div>
+
                     <div className="sub_features">
                       <Tab.Container
                         id="left-tabs-example"
@@ -75,9 +75,7 @@ const SubjectDetails = () => {
                                 )}
                               />
                             </Tab.Pane>
-                            <Tab.Pane eventKey="second">
-                              Second tab content
-                            </Tab.Pane>
+                            <Tab.Pane eventKey="second"></Tab.Pane>
                             <Tab.Pane eventKey="third">
                               Second tab content
                             </Tab.Pane>

@@ -18,11 +18,6 @@ const PdfViewer = (item) => {
     setLoading(false);
   }
 
-  const options = {
-    cMapUrl: "cmaps/",
-    cMapPacked: true,
-    standardFontDataUrl: "standard_fonts/",
-  };
   console.log(pageWidth);
   // Go to next page
   function goToNextPage() {
@@ -32,6 +27,7 @@ const PdfViewer = (item) => {
   function goToPreviousPage() {
     setPageNumber((prevPageNumber) => prevPageNumber - 1);
   }
+
   return (
     <div>
       <Nav
@@ -42,16 +38,14 @@ const PdfViewer = (item) => {
       />
       <div
         hidden={loading}
+        className="pdf-height"
         style={{ height: "calc(100vh - 64px)", overflow: "auto" }}
-        // className="flex items-center"
       >
         <div className="h-full flex justify-center mx-auto">
           <Document
             file={abc}
             onLoadSuccess={onDocumentLoadSuccess}
-            options={options}
             renderMode="canvas"
-            className=""
           >
             <Page
               key={pageNumber}
@@ -71,13 +65,13 @@ const PdfViewer = (item) => {
 function Nav({ pageNumber, numPages, goToNextPage, goToPreviousPage }) {
   return (
     <nav
-      className="bg-black"
+      className="bg-black pdf"
       style={{
         borderTop: "1px solid #fff",
       }}
     >
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-12 items-center justify-between">
+        <div className="relative flex h-10 items-center justify-between">
           <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
             <div
               className="flex flex-shrink-0 items-center "
@@ -85,17 +79,25 @@ function Nav({ pageNumber, numPages, goToNextPage, goToPreviousPage }) {
                 color: "#fff",
               }}
             >
-              <button onClick={goToPreviousPage} disabled={pageNumber <= 1}>
+              <button
+                className="prev"
+                onClick={goToPreviousPage}
+                disabled={pageNumber <= 1}
+              >
                 <span>Previous</span>
               </button>
               &nbsp;&nbsp;&nbsp;
-              <button onClick={goToNextPage} disabled={pageNumber >= numPages}>
+              <button
+                className="next"
+                onClick={goToNextPage}
+                disabled={pageNumber >= numPages}
+              >
                 <span>Next</span>
               </button>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div className="bg-gray-900 text-white rounded-md px-3 text-sm font-medium">
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 num">
+            <div className="bg-gray-900 text-white rounded-md px-3 text-sm font-medium ">
               <span>{pageNumber}</span>
               <span className="text-gray-400"> / {numPages}</span>
             </div>
