@@ -18,6 +18,12 @@ const PdfViewer = (item) => {
     setLoading(false);
   }
 
+  const options = {
+    cMapUrl: "cmaps/",
+    cMapPacked: true,
+    standardFontDataUrl: "standard_fonts/",
+  };
+
   console.log(pageWidth);
   // Go to next page
   function goToNextPage() {
@@ -46,6 +52,7 @@ const PdfViewer = (item) => {
             file={abc}
             onLoadSuccess={onDocumentLoadSuccess}
             renderMode="canvas"
+            options={options}
           >
             <Page
               key={pageNumber}
