@@ -22,6 +22,12 @@ const PdfViewer = (item) => {
     cMapUrl: "cmaps/",
     cMapPacked: true,
     standardFontDataUrl: "standard_fonts/",
+    fontDataUrl: {
+      Roboto:
+        "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-light-webfont.ttf",
+      Arial:
+        "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/arial/arial.ttf",
+    },
   };
 
   console.log(pageWidth);
@@ -53,6 +59,7 @@ const PdfViewer = (item) => {
             onLoadSuccess={onDocumentLoadSuccess}
             renderMode="canvas"
             options={options}
+            style={{ fontFamily: "Arial" }}
           >
             <Page
               key={pageNumber}
