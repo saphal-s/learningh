@@ -7,13 +7,24 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Merriweather", serif;
 }
 body {
   font-family: "Merriweather", serif;
   font-weight: 300;
   font-style: normal;
   /* overflow-x: hidden; */
+}
+.sweet-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .side_bar {
   width: 280px;
