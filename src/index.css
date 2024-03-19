@@ -63,7 +63,7 @@ body {
   font-size: 25px;
 }
 .side_bar h5 {
-  font-size: 15px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -87,7 +87,7 @@ body {
   padding: 5px 0;
 }
 .side_bar ul li {
-  font-size: 14px;
+  font-size: 16px;
   padding: 3px 0;
   cursor: pointer;
 }
