@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Syllabus from "../components/common/Syllabus";
 import SideNav from "../components/header/SideNav";
 import TopNav from "../components/header/TopNav";
-import { SubjectData, SyllabusData } from "../constant/SubData";
+import { NoteData, SubjectData, SyllabusData } from "../constant/SubData";
 
 const SyllabusItem = ({ items }) => {
   return (
@@ -14,6 +14,16 @@ const SyllabusItem = ({ items }) => {
     </>
   );
 };
+
+// const NoteItem = ({ items }) => {
+//   return (
+//     <>
+//       {items.map((item) => (
+//         <Syllabus key={item.id} item={item} />
+//       ))}
+//     </>
+//   );
+// };
 
 const Subject = () => {
   const [show, setShow] = useState(true);
@@ -45,6 +55,11 @@ const Subject = () => {
                     <div className="sub_features">
                       <SyllabusItem
                         items={SyllabusData.filter(
+                          (item) => item.parentId === s.id
+                        )}
+                      />
+                      <SyllabusItem
+                        items={NoteData.filter(
                           (item) => item.parentId === s.id
                         )}
                       />

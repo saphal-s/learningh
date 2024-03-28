@@ -7,6 +7,7 @@ import SideNav from "../components/header/SideNav";
 import TopNav from "../components/header/TopNav";
 import { SubjectData, SyllabusData } from "../constant/SubData";
 import PdfViewer from "../components/common/PdfViewer";
+import Mcqs from "../components/common/Mcqs";
 
 const SyllabusItem = ({ items }) => {
   return (
@@ -64,6 +65,9 @@ const SubjectDetails = () => {
                                 Question Answer
                               </Nav.Link>
                             </Nav.Item>
+                            <Nav.Item>
+                              <Nav.Link eventKey="fourth">MCQ's</Nav.Link>
+                            </Nav.Item>
                           </Nav>
                         </Col>
                         <Col sm={12}>
@@ -78,6 +82,9 @@ const SubjectDetails = () => {
                             <Tab.Pane eventKey="second"></Tab.Pane>
                             <Tab.Pane eventKey="third">
                               Second tab content
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="fourth">
+                              <Mcqs />
                             </Tab.Pane>
                           </Tab.Content>
                         </Col>

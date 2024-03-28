@@ -31,14 +31,27 @@ const SyllabusData = [
     id: 1,
     title: "syllabus",
     parentId: 1,
-    pdf: "../data/cv.pdf",
+    pdf: "../../data/JavaScriptNote.pdf",
   },
   {
     id: 2,
     title: "syllabus",
     parentId: 2,
-    pdf: "../data/cv.pdf",
+    pdf: "../../data/check.pdf",
   },
 ];
-
-export { SubjectData, SyllabusData };
+const NoteData = [
+  {
+    id: 1,
+    title: "note",
+    parentId: 1,
+    pdf: "../data/JavaScriptNote.pdf",
+  },
+  {
+    id: 2,
+    title: "note",
+    parentId: 2,
+    pdf: "../data/JavaScriptNote.pdf",
+  },
+];
+export { SubjectData, SyllabusData, NoteData };

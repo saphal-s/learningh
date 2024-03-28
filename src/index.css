@@ -321,6 +321,53 @@ body {
   height: auto !important;
   zoom: 1.2;
 }
+.quiz_container {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  margin: 20px 2px;
+  padding: 20px;
+}
+.quiz_container h2 {
+  font-size: 25px;
+}
+.quiz_container ul {
+  margin-left: -25px;
+}
+.quiz_container ul li {
+  padding: 5px 0;
+}
+.quiz_container p {
+  font-size: 16px;
+}
+.quiz_container button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 3px 15px;
+}
+
+.quiz_container [type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(255, 200, 0);
+  border-radius: 50%;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.quiz_container input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 3px auto auto auto;
+  border-radius: 50%;
+}
+
+.quiz_container input[type="radio"]:checked:before {
+  background: rgb(255, 200, 0);
+}
 
 @media screen and (max-width: 500px) {
   .feature li {
@@ -353,5 +400,8 @@ body {
   }
   .react-pdf__Page__canvas {
     zoom: 1;
+  }
+  .quiz_container {
+    margin: 2px;
   }
 }
