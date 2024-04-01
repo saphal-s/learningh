@@ -5,7 +5,7 @@ const Syllabus = (item) => {
   return (
     <div>
       <Link
-        to={`/${item.item?.id}/${item.item?.parentId}/${item.item?.title}`}
+        to={`/syllabus/${item.item?.id}/${item.item?.parentId}/${item.item?.title}`}
         className="link text-dark"
       >
         <li className="d-flex">

@@ -1,5 +1,6 @@
 import { PiSignIn } from "react-icons/pi";
 import { FiMenu } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const TopNav = ({ handleShow, show }) => {
   return (
@@ -11,7 +12,9 @@ const TopNav = ({ handleShow, show }) => {
         <h3>Learning Hammer</h3>
       </div>
       <div className="auth">
-        <PiSignIn className="auth_icon" />
+        <Link to="/login" className="auth">
+          <PiSignIn className="auth_icon" />
+        </Link>
       </div>
     </div>
   );

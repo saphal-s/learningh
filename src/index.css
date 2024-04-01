@@ -369,6 +369,16 @@ body {
   background: rgb(255, 200, 0);
 }
 
+.auth {
+  color: #000;
+}
+
+.mcqlink {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
 @media screen and (max-width: 500px) {
   .feature li {
     font-size: 13px;
@@ -404,4 +414,77 @@ body {
   .quiz_container {
     margin: 2px;
   }
+  .quiz_container h2 {
+    font-size: 18px;
+  }
+}
+
+.quiz-container button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+}
+.quiz-container .start_button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quiz-container .timer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.quiz-container .timer p {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.answer-options label {
+  width: 100%;
+  padding-bottom: 5px;
+}
+.question-text {
+  font-weight: 550;
+  font-size: 16px;
+  padding: 15px 0px 5px 0px;
+}
+.mcq-sub-title {
+  font-weight: 550;
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+.mcqicon {
+  color: rgb(246, 193, 3);
+  margin-right: 5px;
+  font-size: 17px;
+}
+.flex-title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.question_type {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.type_link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+  text-decoration: none;
+}
+.type_link:hover {
+  color: rgb(246, 193, 3);
+}
+.score-section p {
+  font-weight: 550;
+  font-size: 17px;
 }

@@ -30,7 +30,7 @@ const Home = () => {
               {SideBarData &&
                 SideBarData.map((s) => (
                   <div className="subject_card" key={s.id}>
-                    <Link to={`/${s.id}`} className="card_link">
+                    <Link to={`/subject/${s.id}`} className="card_link">
                       <div className="title">{s.title}</div>
                       <div className="icon">
                         <FaBookOpen className="book_icon" />

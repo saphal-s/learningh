@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { SideBarData, category } from "../../constant/NavData";
+import { GiThink } from "react-icons/gi";
 
 // Component to render category title
 const CategoryTitle = ({ title }) => {
@@ -32,6 +33,15 @@ const SideNav = () => {
         >
           <AiFillHome className="hicon" />
           &nbsp; Home
+        </Link>
+
+        <Link
+          to="/mcq"
+          className="link "
+          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+        >
+          <GiThink className="hicon" />
+          &nbsp; Entrance Preparation
         </Link>
       </div>
 
