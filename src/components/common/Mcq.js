@@ -131,7 +131,7 @@ const Mcq = () => {
                           <div className="question-text">
                             {index + 1}. {question.question}
                           </div>
-                          <div className="answer-options">
+                          <div className="answer-options ">
                             {question.options.map((option) => (
                               <label key={option}>
                                 <input
@@ -147,7 +147,7 @@ const Mcq = () => {
                                     handleAnswerOptionClick(question.id, option)
                                   }
                                 />
-                                {option}
+                                &nbsp; {option}
                               </label>
                             ))}
                           </div>

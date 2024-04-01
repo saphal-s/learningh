@@ -488,3 +488,28 @@ body {
   font-weight: 550;
   font-size: 17px;
 }
+
+.answer-options [type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(255, 200, 0);
+  border-radius: 50%;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  top: 2px;
+}
+
+.answer-options input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 3px auto auto auto;
+  border-radius: 50%;
+}
+
+.answer-options input[type="radio"]:checked:before {
+  background: rgb(255, 200, 0);
+}

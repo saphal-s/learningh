@@ -39,12 +39,6 @@ const Quiz = () => {
     return () => clearInterval(interval);
   }, [quizStarted]);
 
-  useEffect(() => {
-    if (timer === 0) {
-      handleNextQuestion();
-    }
-  }, [timer]);
-
   const handleStartQuiz = () => {
     setQuizStarted(true);
   };
@@ -62,6 +56,12 @@ const Quiz = () => {
     setCurrentQuestion(currentQuestion + 1);
     setTimer(30); // Reset timer for the next question
   };
+
+  useEffect(() => {
+    if (timer === 0) {
+      handleNextQuestion();
+    }
+  }, [timer]);
 
   return (
     <div className="quiz_container">
