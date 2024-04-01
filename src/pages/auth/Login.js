@@ -1,9 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import SideNav from "../../components/header/SideNav";
 import TopNav from "../../components/header/TopNav";
-import { FaBookOpen } from "react-icons/fa6";
-import { SideBarData } from "../../constant/NavData";
 
 const Login = () => {
   const [show, setShow] = useState(true);
